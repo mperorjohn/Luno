@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-// import SimpleFooter from "./pages/Footer";
+import SimpleFooter from "./pages/Footer";
 import NavBar from "./pages/NavBar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -21,6 +21,7 @@ export default function App() {
         <Route path="register" element={<Register />} />
         <Route path="help" element={<Help />} />
       </Routes>
+      <SimpleFooter />
     </>
   );
 }
