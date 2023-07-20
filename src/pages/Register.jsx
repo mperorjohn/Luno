@@ -148,9 +148,9 @@ const Register = () => {
               <Select
                 color="white"
                 size="lg"
-                className=""
                 label="Language"
                 fullWidth
+                className="text-white"
               >
                 {languages.map((language, index) => (
                   <Option key={index} value={language}>
