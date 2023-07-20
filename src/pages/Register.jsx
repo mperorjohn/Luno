@@ -79,7 +79,7 @@ const Register = () => {
       <div className="Form my-12">
         <Card
           color="transparent"
-          className="mt-12 py-4 h-120 bg-blue-900 px-4"
+          className="mt-12 py-10 h-120 bg-blue-900 px-10"
           shadow={false}
         >
           <Typography variant="h2" color="white" className="text-center mb-4">

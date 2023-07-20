@@ -2,13 +2,8 @@ import React from "react";
 import {
   Drawer,
   Button,
+  ArrowLongRightIcon,
   Typography,
-  IconButton,
-  List,
-  ListItem,
-  ListItemPrefix,
-  ListItemSuffix,
-  Chip,
   Carousel,
   CardHeader,
   CardBody,
@@ -18,20 +13,16 @@ import {
   Card,
 } from "@material-tailwind/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import {
-  PresentationChartBarIcon,
-  ShoppingBagIcon,
-  UserCircleIcon,
-  Cog6ToothIcon,
-  InboxIcon,
-  PowerIcon,
-} from "@heroicons/react/24/solid";
+// import {
+//   PresentationChartBarIcon,
+//   ShoppingBagIcon,
+//   UserCircleIcon,
+//   Cog6ToothIcon,
+//   InboxIcon,
+//   PowerIcon,
+// } from "@heroicons/react/24/solid";
 
 const Home = () => {
-  const [open, setOpen] = React.useState(false);
-  const openDrawer = () => setOpen(true);
-  const closeDrawer = () => setOpen(false);
-
   return (
     <React.Fragment>
       <Carousel className=" ">

@@ -62,14 +62,14 @@ const NavBar = () => {
           Register
         </Typography>
       </Link>
-      <Link to={"help"}>
+      <Link to={"contact"}>
         <Typography
           as={"li"}
           variant={"small"}
           color={"blue-gray"}
           className={"p-1 font-normal"}
         >
-          Help
+          Contact
         </Typography>
       </Link>
     </ul>
