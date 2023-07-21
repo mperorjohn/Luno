@@ -9,8 +9,20 @@ import {
   CardFooter,
   Button,
 } from "@material-tailwind/react";
+import { BsForwardFill } from "react-icons/bs";
+import { useState } from "react";
 
 const Contact = () => {
+  const [contactEmail, setContactEmail] = useState("");
+  const [textArea, setTextArea] = useState("");
+
+  const HandleContactEmailChange = (e) => {
+    setContactEmail(e.target.value);
+  };
+
+  const HandleTextAreaChange = (e) => {
+    setTextArea(e.target.value);
+  };
   return (
     <>
       <div className="Form">
@@ -20,14 +32,31 @@ const Contact = () => {
           </Typography>
           <form action="" className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
             <div className="mb-4 flex flex-col gap-6">
-              <Input color="white" label="Email" type="email" size="lg" />
+              <Input
+                color="white"
+                label="Email"
+                type="email"
+                size="lg"
+                onChange={HandleContactEmailChange}
+              />
               <Input color="white" label="Phone" type="tel" size="lg" />
             </div>
             <div className="w-96">
-              <Textarea label="Message" color="" className="text-white h-32" />
+              <Textarea
+                label="Your Message"
+                color=""
+                className="text-white h-32"
+                onChange={HandleTextAreaChange}
+              />
             </div>
           </form>
-          <Button color="white">Send message</Button>
+          <Button
+            color="white"
+            disabled={contactEmail === "" || textArea === ""}
+          >
+            Send message
+            <BsForwardFill className="" />
+          </Button>
         </Card>
       </div>
     </>

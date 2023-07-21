@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Register from "./pages/Register";
 import Contacts from "./pages/Contact";
+import CreatePassword from "./pages/CreatePassword";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="services" element={<Services />} />
         <Route path="register" element={<Register />} />
         <Route path="contact" element={<Contacts />} />
+        <Route path="createpassword" element={<CreatePassword />} />
       </Routes>
       <SimpleFooter />
     </>

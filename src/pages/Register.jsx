@@ -12,13 +12,12 @@ import {
 import { useState } from "react";
 
 const Register = () => {
-  const [inputEmail, setInputEmail] = React.useState("");
+  const [inputEmail, setInputEmail] = useState("");
   const [profilePicture, setProfilePicture] = React.useState(null);
 
   // Functions to handle change and setters
 
   const HandleInputEmail = (e) => {
-    // ``;
     setInputEmail(e.target.value);
   };
 
