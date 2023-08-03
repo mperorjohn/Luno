@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   Typography,
   Card,
@@ -25,40 +26,47 @@ const Contact = () => {
   };
   return (
     <>
-      <div className="Form">
-        <Card className="mt-12 mb-12 py-10 px-10 bg-blue-900" shadow={false}>
-          <Typography variant="h1" color="white" className="text-center">
-            Leave a Message
-          </Typography>
-          <form action="" className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
-            <div className="mb-4 flex flex-col gap-6">
-              <Input
-                color="white"
-                label="Email"
-                type="email"
-                size="lg"
-                onChange={HandleContactEmailChange}
-              />
-              <Input color="white" label="Phone" type="tel" size="lg" />
-            </div>
-            <div className="w-96">
-              <Textarea
-                label="Your Message"
-                color=""
-                className="text-white h-32"
-                onChange={HandleTextAreaChange}
-              />
-            </div>
-          </form>
-          <Button
-            color="white"
-            disabled={contactEmail === "" || textArea === ""}
-          >
-            Send message
-            <BsForwardFill className="" />
-          </Button>
-        </Card>
-      </div>
+      <motion.div 
+      initial={{x: "-100vw"}}
+      animate={{x: 0}}
+      transition={{type:'just', stiffness:100, damping:'50'}}
+      
+      >
+        <div className="Form">
+          <Card className="mt-12 mb-12 py-10 px-10 bg-blue-900" shadow={false}>
+            <Typography variant="h1" color="white" className="text-center">
+              Leave a Message
+            </Typography>
+            <form action="" className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+              <div className="mb-4 flex flex-col gap-6">
+                <Input
+                  color="white"
+                  label="Email"
+                  type="email"
+                  size="lg"
+                  onChange={HandleContactEmailChange}
+                />
+                <Input color="white" label="Phone" type="tel" size="lg" />
+              </div>
+              <div className="w-96">
+                <Textarea
+                  label="Your Message"
+                  color=""
+                  className="text-white h-32"
+                  onChange={HandleTextAreaChange}
+                />
+              </div>
+            </form>
+            <Button
+              color="white"
+              disabled={contactEmail === "" || textArea === ""}
+            >
+              Send message
+              <BsForwardFill className="" />
+            </Button>
+          </Card>
+        </div>
+      </motion.div>
     </>
   );
 };

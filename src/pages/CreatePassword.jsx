@@ -16,7 +16,9 @@ const CreatePassword = () => {
           <Typography variant="h3" className="Text-white text-center">
             Create Password
           </Typography>
-          <form action=""></form>
+          <form action="">
+            
+          </form>
         </Card>
       </div>
     </>
